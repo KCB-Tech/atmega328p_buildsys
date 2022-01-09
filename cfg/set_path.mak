@@ -45,7 +45,7 @@ INC_DEV = -I$(DEV_DIR)
 # SVC
 SVC = $(wildcard $(SVC_DIR)/*.c)
 OBJ += $(patsubst $(SVC_DIR)/%.c, $(OUTPUT_DIR)/%.o, $(SVC))
-INC_SVC = -I$(SVC_DIR) -I$(MCU_DIR) -I$(AVR_LIBS_DIR) -I$(AVR_DEBUG_LIBS_DIR)
+INC_SVC = -I$(SVC_DIR) -I$(MCU_DIR) -I$(AVR_LIBS_DIR) 
 
 # AVR LIBS
 AVR_LIBS = $(wildcard $(AVR_LIBS_DIR)/*.c)

@@ -23,9 +23,9 @@
 /* typedefs definitions                                                      */
 /*****************************************************************************/
 typedef struct {
-  uint8 * portxn_addr; 
-  uint8 * ddxn_addr; 
-  uint8 * pud_addr; 
+  volatile uint8 * portxn_addr; 
+  volatile uint8 * ddxn_addr; 
+  volatile uint8 * pud_addr; 
 } IoCfg;
 
 /*****************************************************************************/
@@ -38,7 +38,7 @@ typedef struct {
 /*****************************************************************************/
 /* Constant definitions                                                      */
 /*****************************************************************************/
-static volatile IoCfg const kIo_cfg[kNoMorePorts] = {
+IoCfg const kIo_cfg[kNoMorePorts] = {
   {&PORTB, &DDRB, &MCUCR},
   {&PORTB, &DDRB, &MCUCR},
   {&PORTB, &DDRB, &MCUCR},

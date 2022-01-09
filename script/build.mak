@@ -17,7 +17,10 @@ endif
 clean: 
 	@echo Cleaning the working area...
 	@echo "Cleaning up..."
-	del /q /f $(OUTPUT_DIR)\*
+	del /q /f /s $(OUTPUT_DIR)\*.o
+	del /q /f /s $(OUTPUT_DIR)\*.map
+	del /q /f /s $(OUTPUT_DIR)\*.elf
+	del /q /f /s $(OUTPUT_DIR)\*.HEX
 
 release: $(OUTPUT)
 	@echo RELEASE: Done Compiling...
@@ -51,9 +54,6 @@ $(OUTPUT_DIR)/%.o: $(SVC_DIR)/%.c
 
 $(OUTPUT_DIR)/%.o: $(AVR_LIBS_DIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ $(INC_AVR_LIBS)
-
-$(OUTPUT_DIR)/%.o: $(AVR_DEBUG_LIBS_DIR)/%.c
-	$(CC) $(CFLAGS) -c $< -o $@ $(INC_AVR_DEBUGGER_LIBS)
 
 upload:
 	@echo Upload binary to board...
