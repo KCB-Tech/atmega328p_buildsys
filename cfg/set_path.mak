@@ -3,9 +3,6 @@
 # Output dir
 OUTPUT_DIR = $(CWD)\out
 
-# Testing paths
-TEST_DIR = $(CWD)\test
-
 # Tool, configuration and script paths
 SCRIPT_DIR = $(CWD)\script
 CFG_DIR = $(CWD)\cfg

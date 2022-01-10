@@ -91,7 +91,12 @@ help:
 	@echo.
 	@echo E.g.
 	@echo.
+	@echo - ./build.bat all debug
+	@echo - ./build.bat all release
 	@echo - ./build.bat clean
-	@echo - ./build.bat compile
+	@echo - ./build.bat debug
+	@echo - ./build.bat release
+	@echo - ./build.bat upload debug
+	@echo - ./build.bat upload release
 	@echo.
 	@echo Enjoy!!!
